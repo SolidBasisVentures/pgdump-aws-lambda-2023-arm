@@ -8,7 +8,7 @@ const sinon = require('sinon')
 chai.use(chaiAsPromised)
 const { expect } = chai
 
-const pgdump = require('../lib/pgdump')
+const pgdump = require('../lib/pgDump')
 const defaultConfig = require('../lib/config')
 
 describe('pgdump', () => {

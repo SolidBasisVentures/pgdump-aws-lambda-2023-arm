@@ -34,7 +34,7 @@ export const handler: Handler = async (event) => {
 	const baseConfig: Config = { ...DEFAULT_CONFIG, ...event }
 	const config =
 		event.USE_IAM_AUTH === true
-			? decorateWithIamToken(baseConfig)
+			? await decorateWithIamToken(baseConfig)
 			: event.SECRETS_MANAGER_SECRET_ID
 				? await decorateWithSecretsManagerCredentials(baseConfig)
 				: baseConfig

@@ -1,3 +1,3 @@
-import handler from './lib/handler';
+import { handler } from './lib/handler'
 
-export {handler};
+export { handler }
